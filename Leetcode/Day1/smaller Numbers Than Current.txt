@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<int> smallerNumbersThanCurrent(vector<int>& a) {
+        int n=a.size();
+        vector<int>b;
+        for(auto i:a){
+              int c=0;
+            for(auto j:a){
+            if(i>j)
+            c++;           
+            }
+      b.push_back(c);          
+        }
+return b;
+    }
+
+};

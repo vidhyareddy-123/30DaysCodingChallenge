@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) {
+        map<int,int>m;
+        int c=0,res;
+        for(auto i:nums)
+        {
+            m[i]++;
+            res+=m[i]-1;
+        }
+        return res;
+    }
+};
+//num of good pairs

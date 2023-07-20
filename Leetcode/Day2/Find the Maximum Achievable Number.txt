@@ -1,0 +1,7 @@
+class Solution {
+public:
+    int theMaximumAchievableX(int n, int t) {
+       int x=(n+t)+t;
+         return x;
+    }
+};

@@ -1,0 +1,44 @@
+class Solution {
+public:
+    int romanToInt(string s) {
+        /*int c=0;
+        int n=s.size();
+        for(int i=0;i<n;i++){
+            if(s[i]=='I')
+            c++;
+            else if(s[i]=='V')
+            c=c+5;
+            else if(s[i]=='X')
+            c=c+10;
+            else if(s[i]=='L')
+            c=c+50;
+            else if(s[i]=='C')
+            c=c+100;
+            else if(s[i]=='D')
+            c=c+500;
+            else if(s[i]=='M')
+            c=c+1000;
+        }
+        return c;
+        */
+
+        map<char,int>m;
+        m['I']=1;
+        m['V']=5;
+        m['X']=10;
+        m['L']=50;
+        m['C']=100;
+        m['D']=500;
+        m['M']=1000;
+        int n=s.length();
+        int res=0;
+        for(int i=0;i<n;i++){
+            if(m[s[i]]<m[s[i+1]])
+            res=res-m[s[i]];
+            else
+            res=res+m[s[i]];
+        }
+        return res;
+
+    }
+};

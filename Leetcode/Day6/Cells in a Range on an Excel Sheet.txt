@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<string> cellsInRange(string s) {
+
+        vector<string>a;
+        for(char c=s[0];c<=s[3];c++)
+        {
+        for(int i=s[1]-'0';i<=s[4]-'0';i++)
+        {
+         a.push_back(c+to_string(i));
+        }
+      }
+      return a;
+    }
+};

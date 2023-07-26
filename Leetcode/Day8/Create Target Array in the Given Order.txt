@@ -1,0 +1,11 @@
+class Solution {
+public:
+    vector<int> createTargetArray(vector<int>& a1, vector<int>& a2) {
+        vector<int>a;
+        int n=a2.size();
+        for(int i=0;i<n;i++){
+            a.insert(a.begin()+a2[i],a1[i]);
+        }
+        return a;
+    }
+};

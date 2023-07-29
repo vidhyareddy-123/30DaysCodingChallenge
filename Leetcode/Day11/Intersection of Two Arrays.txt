@@ -1,0 +1,27 @@
+class Solution {
+public:
+    vector<int> intersection(vector<int>&a1, vector<int>& a2) {
+        sort(a1.begin(), a1.end());
+        sort(a2.begin(),a2.end());
+        set<int> s;
+        vector<int> r;
+        int i = 0, j = 0;
+        while(i < a1.size() && j <a2.size()){
+            if(a1[i] == a2[j]){
+                s.insert(a1[i]);
+                i++;
+                j++;
+            }
+            else if(a1[i] < a2[j]){
+                i++;
+            }
+            else {
+                j++;
+            }
+        }
+        for(auto i:s){
+            r.push_back(i);
+        }
+        return r;
+    }
+};
